@@ -129,8 +129,8 @@ To implement this solution, you need to create COMMON_GET_CODE, followed by the 
     e. **Language**: Groovy
 
 4. In the **Contents** field, enter the following code. This code consists of two methods:
-   * **getFeederDeepseaFlag**(): This is used to fetch the Berth Type value of the inbound and outbound vessel visits using the COMMON_GET_CODE code library.
-   * **onNotice()**: This is used to update the userDefinedCode7 field of a container using the COMMON_UPDATE_CODE code library.
+   * `getFeederDeepseaFlag()`: This is used to fetch the Berth Type value of the inbound and outbound vessel visits using the COMMON_GET_CODE code library.
+   * `onNotice()`: This is used to update the userDefinedCode7 field of a container using the COMMON_UPDATE_CODE code library.
     
     ```groovy
     import zodiac.zara.invoke.agent.context.EventContextService
