@@ -1,11 +1,12 @@
 # Service requests for container freight station (CFS) operations
 
-Service requests for container freight station (CFS) operations are used to manage the following terminal services:
+The Service Request feature allows you to manage the stuffing and stripping of cargo, also known as container freight station (CFS) operations, at your port terminal. The available request types are as follows:
 
--   Stuffing of cargo to containers
--   Stripping of cargo from containers
+- Cargo receive request - Used for direct stuffing
+- Stuffing request - Used for normal stuffing
+- Stripping request - Used for direct and normal stripping
 
-The following diagram illustrates each request type for CFS operations and their supported terminal operations.
+The following diagram shows the operational use-case flow for each CFS request type.
 
 ![alt text](/Images/Service_request_flow_CFS.png)
 
