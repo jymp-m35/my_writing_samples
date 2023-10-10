@@ -1,6 +1,6 @@
 # Create a stuffing request
 
-Create a stuffing request to pre-advise and manage the stuffing of cargo to a container. For more information, see _Stuffing operation_.
+Create a stuffing request to pre-advise and manage the stuffing of cargo to a container. For more information, see [Service requests for container freight station (CFS) operations](/Service_requests_for_container_freight_station_CFS.md).
 
 When you create a stuffing request, you need to enter the following details:
 
