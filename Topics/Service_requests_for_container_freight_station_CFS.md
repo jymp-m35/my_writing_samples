@@ -2,8 +2,8 @@
 
 Service requests for container freight station (CFS) operations are used to manage the following terminal services:
 
--   Stuffing of cargoes to containers
--   Stripping of cargoes from containers
+-   Stuffing of cargo to containers
+-   Stripping of cargo from containers
 
 The following diagram illustrates each request type for CFS operations and their supported terminal operations.
 
@@ -11,61 +11,46 @@ The following diagram illustrates each request type for CFS operations and their
 
 ## Cargo receive request for direct stuffing
 
-A cargo receive request is used to manage direct stuffing operations of cargoes from truck to container.
+You can use a cargo receive request to manage the direct stuffing of cargo from truck to container.
 
-In this operation, a cargo receive request is created and set with a purpose of stuffing. The cargoes for stuffing are declared in the service request, along with the details of the associated container and truck.
-
-When the service request is dispatched, the corresponding cargo receive job is planned to manage the direct stuffing of cargoes from the truck to the associated container.
+In this operation, you create a cargo receive request and set the purpose to Stuffing. Then, you declare the cargo, the associated container (with Empty shipment status), and the truck carrier in the request. After you specify these details, you can dispatch the request to start planning the cargo receive job.
 
 To know how to create a cargo receive request for direct stuffing operations, see _Create a cargo receive request for direct stuffing_.
 
+> U+1F4DD A cargo receive request for direct stuffing applies only to cargo with an Import (IM) or Inbound (IB) shipping status. For more information, see _Cargo lot shipping status_.
+
 ## Stuffing request
 
-A stuffing request is used to manage the normal stuffing operations in which cargoes are unloaded from truck to CFS facility, and then to a container. This operation consists of two major processes:
+Use a stuffing request to manage the normal stuffing of cargo from a CFS facility to a container. 
 
--   Truck unloading: The cargoes for stuffing are received from a truck and then unloaded to the CFS facility. This process is managed using a cargo receive request (purpose is Export) for normal vessel loading. To know more, see Cargo receive request.
--   Stuffing: The received cargoes are stuffed from the CFS facility to a container. This process is managed using a stuffing request.
-
-For the stuffing process, a stuffing request is created. The cargoes for stuffing are nominated in the service request, along with the details of the associated container.
-
-When the service request is dispatched, the corresponding stuffing job is planned to manage the stuffing of cargoes from the CFS facility to the associated container.
+In this operation, you create a stuffing request and then nominate the cargo and associated container (with Empty shipment status) to the request. After you specify these details, you can dispatch the request to start planning the stuffing job.
 
 To know how to create a stuffing request for normal stuffing operations, see [Create a stuffing request](/Topics/Create_a_stuffing_request.md).
 
+> Before you manage the stuffing of cargo, make sure the receiving of the cargo from a truck carrier to the CFS facility has been managed using a cargo receive request for vessel loading. To know more, see _Cargo receive request for vessel loading_.
+
+> A stuffing request applies only to cargo with an Import (IM) or Inbound (IB) shipping status. For more information, see _Cargo lot shipping status_.
+
 ## Stripping request
 
-A stripping request is used to manage the stripping of cargoes from containers. This service request supports the following stripping operations:
+Use a stripping request to manage one of the following supported operations: the stripping of cargo from containers to a CFS facility or truck carrier. The supported stripping operations are as follows:
 
--   Normal stripping
+> A stripping request applies only to cargo with an Export (EX) or Outbound (OB) shipping status. For more information, see _Cargo lot shipping status_.
+
+### Normal stripping
+
+Use a stripping request to manage the normal stripping of cargo from a container to a CFS facility.
+
+In this operation, you create a stripping request and nominate the container containing the cargo. Then, you set the target location to Warehouse, indicating that the cargo will be stripped from the container and unloaded to a CFS facility. Lastly, you set the shipment status to either full container load (FCL) or less container load (LCL), depending on the bills of lading associated to the container. After you specify these details, you can dispatch the request to start planning the stripping job.
     
-    In normal stripping operations, cargoes are stripped from a container to the CFS facility and then loaded to a truck. This operation consists of two major processes:
+To know how to create a stripping request for normal stripping operations, see _Create a stripping request_.
+
+> After you manage the stripping of a container, you can manage the delivery of the stripped cargo by a truck carrier using a cargo delivery request. To know more, see _Cargo delivery request_.
     
-    1.  Stripping: The cargoes are stripped from a container and then moved to the CFS facility. This process is managed using a stripping request.
-    2.  Delivery: The stripped cargoes are loaded from the CFS facility to a truck for delivery. This process is managed using a cargo delivery request for normal delivery. To know more, see _Cargo delivery request_.
+### Direct stripping
+
+You can also use a stripping request to manage the direct stripping of cargo from a container to a truck carrier.
     
-    For the stripping process, a stripping request is created and nominated with the container that consists of the cargoes for stripping. The shipment status of the container is either full container load (FCL) or less container load (LCL). The warehouse is set as the target location at which the cargoes will be stripped.
+In this operation, you create a stripping request and nominate the container containing the cargo. Then, you set the target location to _Truck_, indicating that the cargo will be stripped from the container and loaded to a truck carrier. Lastly, you set the shipment status to either full container load (FCL) or less container load (LCL), depending on the bills of lading associated to the container. After you specify these details, you can dispatch the request to start planning the stripping job.
     
-    When the service request is dispatched, the corresponding stripping job is planned to manage the stripping of cargoes from the container to the designated location in the CFS facility.
-    
-    To know how to create a stripping request for normal stripping operations, see _Create a stripping request_.
-    
--   Direct stripping
-    
-    In direct stripping operations, cargoes are stripped directly from the container to truck. For this operation, a stripping request is created and nominated with the container that consists of the cargoes for stripping. The shipment status of the container is either full container load (FCL) or less container load (LCL). The truck is set as the target location at which the cargoes will be stripped.
-    
-    When the service request is dispatched, the corresponding stripping job is planned to manage the stripping of cargoes from the container to the designated truck.
-    
-    To know how to create a stripping request for direct stripping operations, see _Create a stripping request_.
-    
--   Partial stripping
-    
-    In partial stripping operations, a container is stripped in portions under separate stripping jobs. Scenarios that require separate stripping jobs for one container includes the following:
-    
-    -   Container is LCL, wherein the commodities belong to different B/L documents.
-    -   Container commodity will be delivered in batches based on availability of truck carriers.
-    -   Container commodity need to undergo customs inspection before delivery.
-    -   Container commodity is overlanded, wherein the stripped quantity exceeds the declared quantity.
-    
-    For this type of operation, separate stripping requests are created and dispatched for each stripping job. As each stripping job proceeds, new seal numbers are attached to the container until the last stripping job. When the last stripping job is completed, the container is tagged as empty to end the stripping operation for the container.
-    
-    Partial stripping can be performed for both normal stripping and direct stripping operations.
+To know how to create a stripping request for direct stripping operations, see _Create a stripping request_.
