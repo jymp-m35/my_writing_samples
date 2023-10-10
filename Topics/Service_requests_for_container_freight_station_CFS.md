@@ -17,7 +17,7 @@ In this operation, you create a cargo receive request and set the purpose to Stu
 
 To know how to create a cargo receive request for direct stuffing operations, see _Create a cargo receive request for direct stuffing_.
 
-> U+1F4DD A cargo receive request for direct stuffing applies only to cargo with an Import (IM) or Inbound (IB) shipping status. For more information, see _Cargo lot shipping status_.
+> A cargo receive request for direct stuffing applies only to cargo with an Import (IM) or Inbound (IB) shipping status. For more information, see _Cargo lot shipping status_.
 
 ## Stuffing request
 
