@@ -1,4 +1,4 @@
-## Service requests for container freight station (CFS) operations
+# Service requests for container freight station (CFS) operations
 
 Service requests for container freight station (CFS) operations are used to manage the following terminal services:
 
@@ -9,7 +9,7 @@ The following diagram illustrates each request type for CFS operations and their
 
 ![alt text](/Images/Service_request_flow_CFS.png)
 
-### Cargo receive request for direct stuffing
+## Cargo receive request for direct stuffing
 
 A cargo receive request is used to manage direct stuffing operations of cargoes from truck to container.
 
@@ -19,7 +19,7 @@ When the service request is dispatched, the corresponding cargo receive job is p
 
 To know how to create a cargo receive request for direct stuffing operations, see _Create a cargo receive request for direct stuffing_.
 
-### Stuffing request
+## Stuffing request
 
 A stuffing request is used to manage the normal stuffing operations in which cargoes are unloaded from truck to CFS facility, and then to a container. This operation consists of two major processes:
 
@@ -32,7 +32,7 @@ When the service request is dispatched, the corresponding stuffing job is planne
 
 To know how to create a stuffing request for normal stuffing operations, see [Create a stuffing request](/Topics/Create_a_stuffing_request.md).
 
-### Stripping request
+## Stripping request
 
 A stripping request is used to manage the stripping of cargoes from containers. This service request supports the following stripping operations:
 
