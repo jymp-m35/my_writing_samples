@@ -4,14 +4,16 @@ This topic describes the guidelines on how to customize the system to update a c
 
 ## Scenario
 
-Your organization configured the user-defined field **userDefinedCode7** as a container attribute and named it FeederDeepsea Flag. When a container is saved in the inventory database, this attribute is updated by a user to indicate whether the container is assigned to a feeder (F) or deep-sea (D) vessel visit. For a container, the FeederDeepsea Flag value is based on the vessel visit Berth Type:
+Your organization configured the user-defined field **userDefinedCode7** as a container attribute and named it FeederDeepsea Flag. When a container is saved in the inventory database, this attribute is updated by a user to indicate whether the container is assigned to a feeder (F) or deep-sea (D) vessel visit. 
+
+The FeederDeepsea Flag value that a user assigns to a container depends on the vessel visit Berth Type:
 
 * If Berth Type is Lighter or Domestic, the user updates FeederDeepsea Flag to F.
 * If Berth Type is International, the user updates FeederDeepsea Flag to D.
 
-For a transshipment (TS) container, FeederDeepsea Flag takes two values because it is assigned to an inbound and an outbound vessel visit. For example, if a container’s inbound vessel visit is Domestic and its outbound vessel visit is International, the user updates FeederDeepsea Flag to FD.
+For a transshipment (TS) container, a user can assign two FeederDeepsea Flag value--one for the inbound vessel visit and another one for the outbound vessel visit. For example, if a container’s inbound vessel visit is Domestic and its outbound vessel visit is International, the user updates FeederDeepsea Flag to FD.
 
-To update container details instantaneously, your organization wants the system to automatically update the FeederDeepsea Flag value when a container shipping status is updated to TS.
+To automate this process, your organization wants the system to automatically update the FeederDeepsea Flag value when a container shipping status is updated to TS.
 
 ## Solution
 
