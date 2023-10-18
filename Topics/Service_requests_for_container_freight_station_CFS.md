@@ -34,7 +34,7 @@ To know how to create a stuffing request for normal stuffing operations, see [Cr
 
 ## Stripping request
 
-Use a stripping request to manage the stripping of cargo from a container to a CFS facility or truck carrier.
+Use a stripping request to manage the stripping of cargo from a container to a CFS facility (normal stripping) or truck carrier (direct stripping).
 
 > A stripping request applies only to cargo with an Export (EX) or Outbound (OB) shipping status. For more information, see _Cargo lot shipping status_.
 
