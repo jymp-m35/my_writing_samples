@@ -2,7 +2,7 @@
 
 A container may need to be stored in the yard before it can be loaded to a vessel or delivered to its consignee. A stored reefer container, especially when full, will need to be connected to electricity to remain at the required temperature. These services are charged to customers based on the number of days a container spent in storage or days a reefer container is connected to electricity.
 
-In TOS+, the number of days charged for a storage or reefer electricity service is called Total Day. Depending on your system configuration, Total Day is calculated on a daily or 24-hour basis. To know the Total Day configuration in your system, contact your system admin.
+In TOS+, the number of days charged for a storage or reefer electricity service is recorded as Total Day. Depending on your system configuration, Total Day is calculated on a daily or 24-hour basis. To know the Total Day configuration in your system, contact your system admin.
 
 ## Sample storage duration
 
